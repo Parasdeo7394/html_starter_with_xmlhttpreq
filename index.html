@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paras web pages</title>
+    <script>
+         function myfunc(){
+            var xmlHTTP = new XMLHttpRequest();
+            xmlHTTP.open('GET','https://jsonplaceholder.typicode.com/users',true);
+            xmlHTTP.send();
+            
+            xmlHTTP.onreadystatechange= function(){
+                console.log(xmlHTTP.responseText);
+                document.getElementById('users').innerHTML=xmlHTTP.responseText
+            }
+         }
+
+         myfunc();
+    
+
+        
+
+        
+    </script>
+    <link rel="stylesheet" href="./style.css"
+    <style>
+        <!-- h1{
+            color:red
+        } -->
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <div Id="users"></div>
+
+    <button onclick="myfunc()">click me.</button>
+</body>
+</html>
+
